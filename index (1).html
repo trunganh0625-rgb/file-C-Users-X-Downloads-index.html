@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nguyễn Thị Ngoan | Portfolio Tiếng Trung Thương Mại (FTU)</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf1d9;--card:#fffaf0;--ink:#1b2a41;--red:#d7263d;--blue:#1f5fa8;--yellow:#f7c548;--mute:#4a5568;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181f;--card:#1e2430;--ink:#f3ead6;--mute:#b7bfcc}}
+:root[data-theme="dark"]{--bg:#14181f;--card:#1e2430;--ink:#f3ead6;--mute:#b7bfcc}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Outfit,system-ui,sans-serif;line-height:1.55}
+h1,h2,h3{font-family:Bangers,Impact,sans-serif;letter-spacing:1px;margin:.2em 0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--yellow);border-bottom:4px solid var(--ink);color:#1b2a41;padding:8px 12px}
+.brand{font-family:Bangers,Impact,sans-serif;font-size:1.3rem}
+nav{display:flex;gap:6px;overflow-x:auto;padding-top:6px}
+nav a{white-space:nowrap;color:#1b2a41;background:#fffaf0;border:2px solid #1b2a41;border-radius:20px;padding:3px 12px;text-decoration:none;font-weight:600;font-size:.85rem}
+nav a:hover{background:var(--red);color:#fff}
+.btn{font:inherit;font-weight:800;cursor:pointer;background:var(--red);color:#fff;border:3px solid var(--ink);border-radius:10px;padding:8px 14px;box-shadow:3px 3px 0 var(--ink);text-decoration:none;display:inline-block}
+.btn.alt{background:var(--blue)}.btn.y{background:var(--yellow);color:#1b2a41}
+main{max-width:1000px;margin:auto;padding:16px}
+section{margin:28px 0}
+.box{background:var(--card);border:4px solid var(--ink);border-radius:12px;padding:18px;box-shadow:6px 6px 0 var(--ink)}
+.cover{height:220px;border:4px solid var(--ink);border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--red));display:grid;place-items:center;color:#fff;font-family:Bangers,Impact;font-size:2rem;text-align:center;margin-bottom:14px}
+.pill{display:inline-block;border:2px solid var(--ink);border-radius:20px;padding:2px 12px;font-weight:800;font-size:.8rem;margin:2px}
+.r{background:var(--red);color:#fff}.y{background:var(--yellow);color:#1b2a41}.b{background:var(--blue);color:#fff}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.say{border:3px solid var(--ink);border-radius:18px;padding:10px 14px;background:#fff;color:#1b2a41;margin-top:12px;font-style:italic}
+.say b{display:block;font-style:normal;color:var(--red);font-size:.8rem}
+.stat{border:3px solid var(--ink);border-radius:10px;padding:10px;background:var(--bg)}
+.card{cursor:pointer;text-align:center}.card:hover{transform:translateY(-3px)}.card .n{font-family:Bangers;color:var(--red);font-size:1.3rem}
+.row{display:flex;justify-content:space-between;gap:10px;border-bottom:2px dashed var(--mute);padding:6px 0;flex-wrap:wrap}
+.bar{height:16px;border:3px solid var(--ink);border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:90.5%;background:var(--red)}
+.note{color:var(--mute);font-size:.9rem}
+input,textarea{width:100%;font:inherit;padding:9px;border:3px solid var(--ink);border-radius:8px;background:var(--card);color:var(--ink);margin:4px 0 10px}
+.ch{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:3px solid var(--ink);border-radius:10px;padding:10px;margin-bottom:10px;background:var(--bg)}
+.ch>div{flex:1;min-width:180px}.ch h3{font-size:1.2rem;word-break:break-all}
+#snowy{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:10;text-align:center}
+#snowy button{font-size:2.4rem;width:72px;height:72px;border-radius:50%;border:4px solid var(--ink);background:#fff;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+#bubble{background:#fff;color:#1b2a41;border:3px solid var(--ink);border-radius:14px;padding:6px 10px;font-weight:800;margin-bottom:6px;max-width:190px;font-size:.85rem}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(100px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:20px;opacity:0;transition:.3s;z-index:11;pointer-events:none}
+#toast.on{opacity:1}
+footer{text-align:center;padding:24px 14px 90px;color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="dog" viewBox="0 0 110 76"><g stroke="#8a5a2b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M20 36Q4 30 8 10Q18 18 26 32Z" fill="#f0b445"/><ellipse cx="52" cy="42" rx="32" ry="17" fill="#f0b445"/><ellipse cx="52" cy="52" rx="22" ry="8" fill="#f8d98f" stroke="none"/><rect x="28" y="52" width="9" height="20" rx="4" fill="#f0b445"/><rect x="42" y="54" width="9" height="18" rx="4" fill="#f0b445"/><rect x="62" y="54" width="9" height="18" rx="4" fill="#f0b445"/><rect x="74" y="52" width="9" height="20" rx="4" fill="#f0b445"/><circle cx="88" cy="28" r="15" fill="#f0b445"/><ellipse cx="101" cy="33" rx="8" ry="6" fill="#f8d98f"/><path d="M78 15Q64 22 69 38Q80 36 83 20Z" fill="#d99a2b"/><path d="M62 31Q74 41 84 40" fill="none" stroke="#d7263d" stroke-width="5"/><circle cx="106" cy="31" r="3.5" fill="#3b3340" stroke="none"/><circle cx="93" cy="25" r="2.3" fill="#3b3340" stroke="none"/><path d="M98 38Q101 47 105 40Z" fill="#f08aa0" stroke="none"/></g></symbol></svg>
+<header>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+<span class="brand">🐾 Nguyễn Thị Ngoan &amp; Cậu Vàng</span>
+<button class="btn y" id="snd" style="padding:4px 10px">🔊 Tiếng sủa: BẬT</button></div>
+<nav><a href="#hero">Trang bìa</a><a href="#vung-namdinh">Nam Định</a><a href="#vung-ftu">FTU</a><a href="#vung-hsk6">Ngoại ngữ</a><a href="#vung-contact">Liên hệ</a></nav>
+</header>
+<main>
+<section id="hero" class="box">
+<svg viewBox="0 0 800 420" role="img" aria-label="Bìa: Cậu Vàng trước khuôn viên Đại học Ngoại thương" style="width:100%;height:auto;display:block;border:4px solid var(--ink);border-radius:12px;margin-bottom:14px;font-family:Outfit,sans-serif">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe0f0"/><stop offset=".6" stop-color="#fdeccf"/><stop offset="1" stop-color="#fbf1d9"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="#fff3bf"/><stop offset=".5" stop-color="#ffd98a"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+<pattern id="win" width="30" height="34" patternUnits="userSpaceOnUse"><rect x="6" y="7" width="18" height="20" rx="2" fill="#8fb8d9"/></pattern></defs>
+<rect width="800" height="420" fill="url(#sk)"/>
+<circle cx="680" cy="110" r="90" fill="url(#sun)"/>
+<g fill="#fff" opacity=".85"><ellipse cx="130" cy="95" rx="50" ry="14"/><ellipse cx="162" cy="83" rx="30" ry="12"/><ellipse cx="560" cy="70" rx="44" ry="12"/></g>
+<rect y="300" width="800" height="120" fill="#a9d28f"/>
+<path d="M360 318H440L580 420H220Z" fill="#f3e6c6"/>
+<g><rect x="186" y="176" width="430" height="144" rx="4" fill="#f4ead2"/><rect x="198" y="188" width="120" height="116" fill="url(#win)"/><rect x="482" y="188" width="120" height="116" fill="url(#win)"/>
+<rect x="326" y="124" width="148" height="196" rx="4" fill="#fbf3e0"/><path d="M316 126L400 84 484 126Z" fill="#d9c9a3"/>
+<rect x="340" y="140" width="120" height="34" rx="5" fill="#1f5fa8"/><text x="400" y="165" text-anchor="middle" font-family="Bangers,Impact,sans-serif" font-size="26" fill="#fff">FTU</text>
+<text x="400" y="190" text-anchor="middle" font-size="9" font-weight="800" fill="#1f5fa8">FOREIGN TRADE UNIVERSITY</text>
+<g fill="#e8dcc0"><rect x="342" y="200" width="10" height="112"/><rect x="368" y="200" width="10" height="112"/><rect x="422" y="200" width="10" height="112"/><rect x="448" y="200" width="10" height="112"/></g>
+<rect x="382" y="256" width="36" height="62" rx="3" fill="#6b8bb0"/><rect x="356" y="312" width="88" height="9" rx="2" fill="#d9c9a3"/>
+<path d="M400 84V42" stroke="#8a7a5a" stroke-width="3"/><rect x="401" y="42" width="36" height="24" fill="#d7263d"/><text x="419" y="61" text-anchor="middle" font-size="16" fill="#ffd23f">★</text></g>
+<rect x="150" y="318" width="500" height="7" rx="3" fill="#c8b98f"/>
+<g><rect x="62" y="196" width="14" height="124" rx="5" fill="#8a5a3a"/><circle cx="70" cy="170" r="48" fill="#7fb069"/><circle cx="40" cy="198" r="28" fill="#6fa35c"/><circle cx="100" cy="198" r="28" fill="#6fa35c"/><g fill="#e5484d"><circle cx="50" cy="160" r="5"/><circle cx="84" cy="150" r="5"/><circle cx="96" cy="188" r="5"/><circle cx="36" cy="196" r="5"/><circle cx="68" cy="182" r="5"/></g></g>
+<g><rect x="728" y="206" width="14" height="114" rx="5" fill="#8a5a3a"/><circle cx="735" cy="182" r="46" fill="#7fb069"/><circle cx="706" cy="208" r="26" fill="#6fa35c"/><circle cx="764" cy="208" r="26" fill="#6fa35c"/><g fill="#e5484d"><circle cx="716" cy="170" r="5"/><circle cx="748" cy="160" r="5"/><circle cx="760" cy="196" r="5"/><circle cx="728" cy="190" r="5"/></g></g>
+<ellipse cx="418" cy="410" rx="84" ry="9" fill="#5a7a56" opacity=".25"/>
+<use href="#dog" x="320" y="286" width="200" height="138"/>
+<text x="400" y="54" text-anchor="middle" font-family="Bangers,Impact,sans-serif" font-size="38" letter-spacing="1" fill="#1f3f6e" stroke="#fffaf0" stroke-width="7" stroke-linejoin="round" paint-order="stroke">NGUYỄN THỊ NGOAN • PORTFOLIO</text>
+<g transform="translate(24,372)"><rect x="3" y="4" width="250" height="36" rx="18" fill="#1f3f6e" opacity=".18"/><rect width="250" height="36" rx="18" fill="#f7c548"/><text x="125" y="26" text-anchor="middle" font-family="Bangers,Impact,sans-serif" font-size="21" fill="#1f3f6e">EXPLORE WITH CẬU VÀNG</text></g>
+</svg>
+<span class="pill r">ĐẠI HỌC NGOẠI THƯƠNG (FTU)</span><span class="pill y">HSK 6 • HSKK Cao Cấp</span><span class="pill b">GPA 3.62 / 4.0</span><span class="pill r">IELTS 7.0</span>
+<h1 style="font-size:2.6rem">Nguyễn Thị Ngoan</h1>
+<p><b>Sinh viên ngành Tiếng Trung thương mại • ĐH Ngoại thương (FTU, Khóa 2024 - 2028)</b></p>
+<p>Sinh viên ngành Tiếng Trung thương mại (2024 - 2028) tại Đại học Ngoại thương, có chứng chỉ HSK 6, HSKK Cao Cấp và IELTS 7.0. Tôi đang tìm cơ hội thực tập để dùng tiếng Trung trong công việc thực tế.</p>
+<div class="grid">
+<div class="stat">🎓 <b>Ngoại Thương (FTU)</b><br><span class="note">2024 - 2028 • MSV: 2411720029</span></div>
+<div class="stat">📈 <b>GPA 3.62 / 4.0</b><br><span class="note">Học lực Xuất Sắc</span></div>
+<div class="stat">🀄 <b>HSK 6 &amp; HSKK CC</b><br><span class="note">Chứng chỉ tiếng Trung</span></div>
+<div class="stat">📖 <b>IELTS 7.0</b><br><span class="note">Chứng chỉ tiếng Anh</span></div>
+<div class="stat">🧭 <b>Nam Định ➔ Hà Nội</b><br><span class="note">Chùa Láng, Đống Đa</span></div></div>
+<div class="say"><b>CẬU VÀNG:</b>"Gâu! Mời bạn xem hồ sơ của cô chủ Ngoan."</div>
+<p><button class="btn" id="tour">🐾 Cùng Cậu Vàng ghé thăm từng trạm!</button> <a class="btn alt" href="#vung-contact">✉️ Liên hệ</a></p>
+</section>
+
+<section id="ban-do">
+<h2>🗺️ Bản đồ hành trình</h2>
+<div class="say" style="margin:0 0 12px"><b>CẬU VÀNG:</b><span id="mapsay">Gâu! Bấm vào một điểm trên bản đồ, tôi sẽ dẫn bạn đi.</span></div>
+<svg viewBox="0 0 800 420" role="img" aria-label="Bản đồ hành trình: Nam Định, FTU, HSK 6, Liên hệ" style="width:100%;height:auto;display:block;border:4px solid var(--ink);border-radius:12px;background:#f0dba5;margin-bottom:14px;font-family:Outfit,sans-serif">
+<defs><pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c9a96a" stroke-width=".7" opacity=".6"/></pattern></defs>
+<rect width="800" height="420" fill="url(#gr)"/>
+<path d="M0 350 Q110 300 210 345 T410 390 V420H0Z" fill="#7fb7d6" opacity=".75"/>
+<path d="M560 420 Q630 340 710 360 T800 310 V420Z" fill="#9bc489" opacity=".7"/>
+<path d="M590 100l32-56 32 56z M635 100l26-44 26 44z" fill="#8a7a5a" stroke="#1b2a41" stroke-width="2"/>
+<text x="400" y="46" text-anchor="middle" font-family="Bangers,Impact,sans-serif" font-size="30" fill="#1b2a41">EXPLORE WITH CẬU VÀNG</text>
+<g transform="translate(70,110)"><circle r="36" fill="#fff9e6" stroke="#1b2a41" stroke-width="3"/><path d="M0-30L8 0 0 30-8 0Z" fill="#d7263d"/><path d="M-30 0L0-8 30 0 0 8Z" fill="#1b2a41"/><text y="-42" text-anchor="middle" font-size="14" font-weight="800" fill="#1b2a41">N</text></g>
+<path id="rt" d="M170 320 Q230 235 330 232 T520 142 T650 252" fill="none" stroke="#d7263d" stroke-width="4" stroke-dasharray="10 8"/>
+<g data-walk="vung-namdinh" style="cursor:pointer"><circle cx="170" cy="320" r="20" fill="#d7263d" stroke="#1b2a41" stroke-width="3"/><text x="170" y="327" text-anchor="middle" font-size="20">📍</text><rect x="198" y="306" width="150" height="28" rx="14" fill="#fff" stroke="#1b2a41" stroke-width="2.5"/><text x="273.0" y="325" text-anchor="middle" font-size="13" font-weight="800" fill="#1b2a41">Nam Dinh (hometown)</text></g><g data-walk="vung-ftu" style="cursor:pointer"><circle cx="330" cy="232" r="20" fill="#d7263d" stroke="#1b2a41" stroke-width="3"/><text x="330" y="239" text-anchor="middle" font-size="20">🏛️</text><rect x="358" y="236" width="150" height="28" rx="14" fill="#fff" stroke="#1b2a41" stroke-width="2.5"/><text x="433.0" y="255" text-anchor="middle" font-size="13" font-weight="800" fill="#1b2a41">FTU, Hanoi</text></g><g data-walk="vung-hsk6" style="cursor:pointer"><circle cx="520" cy="142" r="20" fill="#d7263d" stroke="#1b2a41" stroke-width="3"/><text x="520" y="149" text-anchor="middle" font-size="20">⛩️</text><rect x="548" y="126" width="200" height="28" rx="14" fill="#fff" stroke="#1b2a41" stroke-width="2.5"/><text x="648.0" y="145" text-anchor="middle" font-size="13" font-weight="800" fill="#1b2a41">HSK 6 · HSKK · IELTS 7.0</text></g><g data-walk="vung-contact" style="cursor:pointer"><circle cx="650" cy="252" r="20" fill="#d7263d" stroke="#1b2a41" stroke-width="3"/><text x="650" y="259" text-anchor="middle" font-size="20">📮</text><rect x="600" y="284" width="120" height="28" rx="14" fill="#fff" stroke="#1b2a41" stroke-width="2.5"/><text x="660.0" y="303" text-anchor="middle" font-size="13" font-weight="800" fill="#1b2a41">Contact</text></g>
+<g id="mdog" transform="translate(170,320)"><use href="#dog" x="-40" y="-52" width="80" height="55" pointer-events="none"/></g></svg>
+<div class="grid">
+<div class="box card" data-go="vung-namdinh"><div class="n">TRẠM 01 📍</div><b>Nam Định</b><div class="note">Quê nhà</div></div>
+<div class="box card" data-go="vung-ftu"><div class="n">TRẠM 02 🏛️</div><b>FTU &amp; Chùa Láng</b><div class="note">Khóa 2024 - 2028</div></div>
+<div class="box card" data-go="vung-hsk6"><div class="n">TRẠM 03 ⛩️</div><b>Năng lực ngoại ngữ</b><div class="note">HSK 6, HSKK CC, IELTS 7.0</div></div>
+<div class="box card" data-go="vung-contact"><div class="n">TRẠM 04 📮</div><b>Trạm liên hệ</b><div class="note">Zalo • Gmail</div></div>
+</div></section>
+
+<section id="vung-namdinh" class="box">
+<span class="pill y">VÙNG ĐẤT 1</span><h2>🌾 Quê quán: Nam Định</h2>
+<p>Tôi sinh ra và lớn lên ở Nam Định. Học xa nhà ở Hà Nội giúp tôi rèn được:</p>
+<ul><li>Cẩn thận, làm xong việc đã nhận.</li><li>Tự lập trong sinh hoạt và học tập.</li><li>Biết tiếp thu góp ý.</li></ul>
+<div class="say"><b>Cậu Vàng:</b>"Gâu! Đi tiếp thôi."</div>
+<p><button class="btn alt" data-go="vung-ftu">Tiếp tục đến Trạm 2 ➔</button></p></section>
+
+<section id="vung-ftu" class="box">
+<span class="pill r">VÙNG ĐẤT 2</span><h2>🎓 Đại học Ngoại thương (FTU)</h2>
+<div class="row"><span>Họ và tên</span><b>Nguyễn Thị Ngoan</b></div>
+<div class="row"><span>Niên khóa</span><b>Khóa 63 • 2024 - 2028</b></div>
+<div class="row"><span>Mã sinh viên</span><b>2411720029</b></div>
+<div class="row"><span>Chuyên ngành</span><b>Tiếng Trung Thương Mại</b></div>
+<div class="row"><span>GPA</span><b>3.62 / 4.0 (Xuất Sắc)</b></div>
+<div class="row"><span>Tạm trú</span><b>Chùa Láng, Láng Thượng, Đống Đa, Hà Nội</b></div>
+<p><div class="bar"><i></i></div><span class="note">GPA 3.62 / 4.0, xếp loại Xuất Sắc.</span></p>
+<div class="grid">
+<div class="stat">📚 <b>Chuyên ngành</b><br><span class="note">Học tiếng Trung và kiến thức cơ bản về thương mại quốc tế.</span></div>
+<div class="stat">🌏 <b>Giao tiếp</b><br><span class="note">Luyện từ vựng và cách giao tiếp trong môi trường học thuật, kinh doanh.</span></div>
+<div class="stat">💡 <b>Thái độ làm việc</b><br><span class="note">Cẩn thận, có trách nhiệm với việc được giao.</span></div></div>
+<div class="say"><b>Cậu Vàng:</b>"Gâu! Cô chủ đi học đều ở FTU."</div>
+<p><button class="btn alt" data-go="vung-hsk6">Tiếp tục đến Trạm 3 ➔</button></p></section>
+
+<section id="vung-hsk6" class="box">
+<span class="pill b">VÙNG ĐẤT 3</span><h2>⛩️ Năng lực ngoại ngữ</h2>
+<p>Tôi có chứng chỉ HSK 6 và HSKK Cao Cấp (tự học và luyện tập đều đặn), cùng chứng chỉ IELTS 7.0.</p>
+<div class="grid">
+<div class="stat"><h3>💮 HSK 6</h3><ul><li>Vốn từ khoảng 5.000 từ trở lên.</li><li>Đọc được văn bản học thuật và tin tức kinh tế, thương mại cơ bản.</li><li>Tra cứu thuật ngữ, hỗ trợ dịch và tổng hợp tài liệu.</li></ul></div>
+<div class="stat"><h3>🗣️ HSKK Cao Cấp</h3><ul><li>Phát âm rõ, diễn đạt mạch lạc.</li><li>Trao đổi được trong học tập và giao tiếp thông thường.</li><li>Đang luyện thêm phản xạ khi nói.</li></ul></div><div class="stat"><h3>📖 IELTS 7.0</h3><ul><li>Chứng chỉ tiếng Anh quốc tế, đánh giá 4 kỹ năng: nghe, nói, đọc, viết.</li><li>Mức 7.0 tương đương trình độ C1 theo khung tham chiếu châu Âu (CEFR).</li></ul></div></div>
+<div class="grid" style="margin-top:14px">
+<div class="stat">📑 <b>Biên dịch &amp; xử lý tài liệu</b><br><span class="note">Tra cứu thuật ngữ, dịch văn bản và chứng từ thương mại cơ bản.</span></div>
+<div class="stat">🎙️ <b>Giao tiếp</b><br><span class="note">Rõ ràng, lịch sự, làm việc nhóm được.</span></div>
+<div class="stat">🌐 <b>Tìm kiếm thông tin</b><br><span class="note">Dùng công cụ tìm kiếm tiếng Trung để tra sản phẩm và tư liệu.</span></div>
+<div class="stat">💬 <b>Tin học văn phòng</b><br><span class="note">Dùng tốt các công cụ văn phòng, làm việc có kỷ luật.</span></div></div>
+<div class="say"><b>Cậu Vàng:</b>"Gâu! Cô chủ vẫn đang học thêm mỗi ngày."</div>
+<p><button class="btn y" id="woof">🐕 Sủa Gâu gâu!</button> <button class="btn alt" data-go="vung-contact">Tiếp tục đến Trạm 4 ➔</button></p></section>
+
+<section id="vung-contact" class="box">
+<span class="pill y">VÙNG ĐẤT 4</span><h2>📮 Trạm liên hệ</h2>
+<p>Tôi đang tìm cơ hội thực tập và học việc có dùng tiếng Trung. Có thể liên hệ qua Zalo hoặc email.</p>
+<div class="ch"><span style="font-size:2rem">💬</span><div><span class="note">ZALO</span><h3>0357296623</h3></div><button class="btn" data-copy="0357296623">📋 Sao chép</button><a class="btn alt" target="_blank" rel="noopener" href="https://zalo.me/0357296623">Mở Zalo ➔</a></div>
+<div class="ch"><span style="font-size:2rem">✉️</span><div><span class="note">GMAIL</span><h3>ngoanngoan0357@gmail.com</h3></div><button class="btn" data-copy="ngoanngoan0357@gmail.com">📋 Sao chép</button><a class="btn alt" href="mailto:ngoanngoan0357@gmail.com?subject=%5BFTU%20Tuy%E1%BB%83n%20D%E1%BB%A5ng%5D%20C%C6%A1%20h%E1%BB%99i%20h%E1%BB%A3p%20t%C3%A1c">Soạn email ➔</a></div>
+<div class="ch"><span style="font-size:2rem">📍</span><div><span class="note">ĐỊA BÀN HIỆN TẠI</span><h3 style="word-break:normal">Chùa Láng, Láng Thượng, Đống Đa, Hà Nội</h3></div></div>
+<h3>Gửi tin nhắn cho Ngoan</h3>
+<form id="f">
+<label>Họ tên / Doanh nghiệp</label><input id="fn" required>
+<label>Số điện thoại hoặc email liên hệ</label><input id="fc" required>
+<label>Lời nhắn</label><textarea id="fm" rows="4" required></textarea>
+<button class="btn" type="submit">Gửi qua email</button>
+<p class="note">Bấm gửi sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn.</p></form>
+</section>
+</main>
+<aside id="snowy"><div id="bubble">Gâu! Bấm vào tôi nhé!</div><button id="dog" aria-label="Cậu Vàng"><svg viewBox="0 0 110 76" width="54" height="37"><use href="#dog"/></svg></button></aside>
+<div id="toast" role="status"></div>
+<footer>🐾 Thiết kế lấy cảm hứng từ phố làng Việt Nam • © 2026 Nguyễn Thị Ngoan • ĐH Ngoại thương (FTU)</footer>
+<script>
+(function(){
+var on=true,ctx,ids=["hero","vung-namdinh","vung-ftu","vung-hsk6","vung-contact"],cur=0;
+function $(s){return document.querySelector(s)}
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(function(){e.classList.remove("on")},1800)}
+function bark(n){if(!on)return;try{ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();for(var i=0;i<n;i++){(function(k){var t=ctx.currentTime+k*.22,o=ctx.createOscillator(),g=ctx.createGain();o.type="sawtooth";o.frequency.setValueAtTime(520,t);o.frequency.exponentialRampToValueAtTime(240,t+.14);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.35,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.16);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+.18)})(i)}}catch(e){}
+$("#bubble").textContent=["Gâu gâu!","WOOF! WOOF!","Gâu! Đi tiếp nào!"][Math.floor(Math.random()*3)]}
+function go(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:"smooth"});cur=Math.max(0,ids.indexOf(id));bark(1)}}
+document.addEventListener("click",function(e){
+var g=e.target.closest("[data-go]");if(g){go(g.dataset.go);return}
+var c=e.target.closest("[data-copy]");if(c){var v=c.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(function(){toast("🐾 Đã sao chép!")},function(){toast("Hãy chép thủ công: "+v)});bark(1)}});
+$("#snd").onclick=function(){on=!on;this.textContent=on?"🔊 Tiếng sủa: BẬT":"🔇 Tiếng sủa: TẮT"};
+$("#woof").onclick=function(){bark(2)};
+$("#dog").onclick=function(){cur=(cur+1)%ids.length;go(ids[cur]);bark(2)};
+var rt=$("#rt"),L=rt.getTotalLength(),md=$("#mdog"),pos=0,dir=1,busy=false,rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var stops=[[170,320,"vung-namdinh","Gâu! Đây là Nam Định, quê của cô chủ."],[330,232,"vung-ftu","Gâu! Đây là Đại học Ngoại thương, nơi cô chủ đang học."],[520,142,"vung-hsk6","Gâu! Đây là phần chứng chỉ: HSK 6, HSKK Cao Cấp và IELTS 7.0."],[650,252,"vung-contact","Gâu! Đây là cách liên hệ với cô chủ."]];
+stops.forEach(function(t){var b=0,bd=1e9;for(var l=0;l<=L;l+=3){var q=rt.getPointAtLength(l),d=Math.hypot(q.x-t[0],q.y-t[1]);if(d<bd){bd=d;b=l}}t.push(b)});
+function place(l){var q=rt.getPointAtLength(l);md.setAttribute("transform","translate("+q.x+","+q.y+") scale("+dir+",1)")}
+function say(t){$("#mapsay").textContent=t}
+function walk(i,cb){if(busy)return;busy=true;var f=pos,to=stops[i][4],t0=null,dur=rm?1:Math.max(600,Math.abs(to-f)*7);dir=to<f?-1:1;
+function step(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/dur);pos=f+(to-f)*k;place(pos);if(k<1)requestAnimationFrame(step);else{busy=false;say(stops[i][3]);bark(1);cb&&cb()}}requestAnimationFrame(step)}
+document.addEventListener("click",function(e){var w=e.target.closest("[data-walk]");if(!w)return;var id=w.dataset.walk,i=stops.findIndex(function(t){return t[2]===id});walk(i,function(){setTimeout(function(){go(id)},1100)})});
+function tour(i){if(i>=stops.length){say("Gâu! Bấm vào từng điểm để xem chi tiết nhé.");return}walk(i,function(){setTimeout(function(){tour(i+1)},2300)})}
+$("#tour").onclick=function(){go("ban-do");if(!busy)setTimeout(function(){tour(0)},rm?0:700)};
+$("#f").onsubmit=function(e){e.preventDefault();var b="Tên/Doanh nghiệp: "+$("#fn").value+"\nLiên hệ: "+$("#fc").value+"\n\n"+$("#fm").value;bark(2);toast("🐾 Đang mở email...");location.href="mailto:ngoanngoan0357@gmail.com?subject="+encodeURIComponent("[Liên hệ từ Portfolio] "+$("#fn").value)+"&body="+encodeURIComponent(b)}
+})();
+</script>
+</body>
+</html>
